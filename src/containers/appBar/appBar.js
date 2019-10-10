@@ -10,7 +10,7 @@ import {
   Menu,
   Button,
 } from '@material-ui/core';
-import { MoreVert } from '@material-ui/icons';
+import { MoreVert, Publish, GetApp } from '@material-ui/icons';
 
 import { mapDispatch, mapState } from './appBar.controller';
 
@@ -20,10 +20,10 @@ const styles = theme => ({
   },
   title: {
     flexGrow: 1,
-    // display: 'none',
-    // [theme.breakpoints.up('sm')]: {
-    //   display: 'block',
-    // },
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
   },
 });
 
@@ -63,8 +63,13 @@ class AppBarComponent extends Component {
           <Typography className={classes.title} variant="h6" noWrap>
             BPR Dalung
           </Typography>
-          <Button color="inherit">Import</Button>
-          <Button color="inherit">Export</Button>
+          <Button color="inherit">
+            <Publish /> Import
+          </Button>
+          <Button color="inherit">
+            <GetApp />
+            Export
+          </Button>
         </Toolbar>
       </AppBar>
     );
