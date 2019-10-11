@@ -89,11 +89,9 @@ class AppBarComponent extends Component {
             width: 200,
           },
         }}
-        onClose={() => this.handleClose()}
+        onClose={() => this.handleClose(null)}
       >
-        <MenuItem selected onClick={() => this.handleClose('/')}>
-          Home
-        </MenuItem>
+        <MenuItem selected>Home</MenuItem>
       </Menu>
     );
   };
