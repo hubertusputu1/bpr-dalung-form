@@ -8,7 +8,7 @@ import {
   CssBaseline,
 } from '@material-ui/core';
 
-import Home from './containers/home';
+import FirstForm from './containers/firstForm';
 import NotFoundPage from './containers/notFoundPage';
 
 const theme = createMuiTheme({
@@ -19,8 +19,8 @@ const theme = createMuiTheme({
 });
 
 class App extends Component {
-  renderHome = props => {
-    return <Home {...props} />;
+  renderFirstForm = props => {
+    return <FirstForm {...props} />;
   };
 
   renderNotFoundPage = () => {
@@ -33,7 +33,11 @@ class App extends Component {
         <CssBaseline>
           <Router>
             <Switch>
-              <Route exact path="/" render={props => this.renderHome(props)} />
+              <Route
+                exact
+                path="/"
+                render={props => this.renderFirstForm(props)}
+              />
               <Route render={props => this.renderNotFoundPage()} />
             </Switch>
           </Router>
