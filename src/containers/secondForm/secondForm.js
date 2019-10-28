@@ -17,7 +17,7 @@ import {
 } from '@material-ui/core';
 import { MoreVert, NavigateBefore, NavigateNext } from '@material-ui/icons';
 
-import { mapDispatch, mapState } from './firstForm.controller';
+import { mapDispatch, mapState } from './secondForm.controller';
 import FirstSection from './firstSection';
 import SecondSection from './secondSection';
 
@@ -79,7 +79,7 @@ const styles = theme => ({
   },
 });
 
-class FirstForm extends Component {
+class SecondForm extends Component {
   constructor(props) {
     super(props);
   }
@@ -100,7 +100,7 @@ class FirstForm extends Component {
       <Button
         style={{ width: 100 }}
         color="default"
-        onClick={() => this.props.history.push('2')}
+        onClick={() => console.log('hello')}
       >
         Next
       </Button>
@@ -125,4 +125,4 @@ class FirstForm extends Component {
 export default connect(
   mapState,
   mapDispatch
-)(withStyles(styles)(FirstForm));
+)(withStyles(styles)(SecondForm));

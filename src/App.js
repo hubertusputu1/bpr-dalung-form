@@ -9,6 +9,7 @@ import {
 } from '@material-ui/core';
 
 import FirstForm from './containers/firstForm';
+import SecondForm from './containers/secondForm';
 import NotFoundPage from './containers/notFoundPage';
 
 const theme = createMuiTheme({
@@ -21,6 +22,10 @@ const theme = createMuiTheme({
 class App extends Component {
   renderFirstForm = props => {
     return <FirstForm {...props} />;
+  };
+
+  renderSecondForm = props => {
+    return <SecondForm {...props} />;
   };
 
   renderNotFoundPage = () => {
@@ -37,6 +42,11 @@ class App extends Component {
                 exact
                 path="/"
                 render={props => this.renderFirstForm(props)}
+              />
+              <Route
+                exact
+                path="/2"
+                render={props => this.renderSecondForm(props)}
               />
               <Route render={props => this.renderNotFoundPage()} />
             </Switch>
