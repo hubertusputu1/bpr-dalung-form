@@ -51,7 +51,7 @@ class FirstSection extends Component {
             FORMULIR APLIKASI PERMBUKAAN REKENING
           </Typography>
           <Typography className={classes.text} variant="h6">
-            NON PERORANGAN
+            Non Perorangan
           </Typography>
         </div>
         <div className={classes.form}>

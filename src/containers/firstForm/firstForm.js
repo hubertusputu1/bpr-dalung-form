@@ -19,6 +19,7 @@ import { MoreVert, NavigateBefore, NavigateNext } from '@material-ui/icons';
 
 import { mapDispatch, mapState } from './firstForm.controller';
 import FirstSection from './firstSection';
+import SecondSection from './secondSection';
 
 import AppBarComponent from '../appBar';
 
@@ -89,6 +90,7 @@ class FirstForm extends Component {
     return (
       <div>
         <FirstSection classesParent={classes} />
+        <SecondSection classesParent={classes} />
       </div>
     );
   };
